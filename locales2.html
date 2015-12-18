@@ -1,0 +1,124 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>SUCURSALES</title>
+
+<link rel="stylesheet" href="css/main.css" type="text/css" />
+<link rel="stylesheet" href="css/estilos.css"  type="text/css">		
+<link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css" type="text/css" />
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCM9wQl43njPJConO9DEhd3TMh7zFpEQXw&sensor=false"></script>
+
+</head>
+<script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
+<body>
+	<header id="hed">
+	</header>
+
+	<!--<div id="header"></div>-->
+	
+    <div class="content">
+    	<div id="main_slider">        
+		</div>
+        
+        <div class="content_block_full">
+        
+   
+            <div id="div_menu" class="content_block_half">
+                <ul id="menu">
+                
+                
+                </ul>
+            </div>
+        <div id="mapas" class="content_block_half">
+            <div id="mapa"></div>
+            <input type="button" id="traza_map" name="***"/>
+            <div id="mapai"></div>
+            <br>
+            <div class="mini-gallery">
+            
+            	<div>
+                	<a class="fancybox" rel="group" href="img/gallery/2.jpg">
+                	<img src="img/gallery/2.jpg">
+                    </a>
+                </div>
+                <div>
+                	<a class="fancybox" rel="group" href="img/gallery/3.jpg">
+                    <img src="img/gallery/3.jpg">
+                    </a>
+                </div>
+                <div>
+                	<a class="fancybox" rel="group" href="img/gallery/4.jpg">
+               		<img src="img/gallery/4.jpg">
+                    </a>
+                </div>
+            
+            </div>
+
+        </div>
+        
+     </div>
+    
+    
+    </div>
+   
+    
+    <footer id="foot">
+	</footer>
+       
+</body>
+<script type="text/javascript" src="js/db_sql.js"></script>
+
+<script type="text/javascript">
+    window.onload = function () {
+
+        //$(".fancybox").fancybox();
+
+
+        //var menu_ul = $('#menu > li > ul'),
+        //    menu_a = $('#menu > li > a');
+
+        //menu_ul.hide();
+
+        //menu_a.click(function (e) {
+        //    e.preventDefault();
+        //    if (!$(this).hasClass('active')) {
+        //        menu_a.removeClass('active');
+        //        menu_ul.filter(':visible').slideUp('normal');
+        //        $(this).addClass('active').next().stop(true, true).slideDown('normal');
+        //    } else {
+        //        $(this).removeClass('active');
+        //        $(this).next().stop(true, true).slideUp('normal');
+        //    }
+        //});
+
+    }
+
+$(function() {
+	
+	$(document).ready(function() {
+	    
+
+        $.ajax({
+            type: "GET",
+            url: "php/listado_sucursales.html",
+            success: function (a) {
+                $("#menu").html(a);
+            },
+        });
+        $.ajax({
+            type: "GET",
+            url: "php/busqueda_sucursales.html",
+            success: function (a) {
+                $("#mapai").append(a);
+            },
+        });
+	});
+});
+</script>
+<script src="js/content.js"></script>
+<script type="text/javascript" src="lib/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript" src="lib/fancybox/jquery.fancybox.pack.js"></script>
+    <script type="text/javascript" src="js/principal.js"></script>
+</html>
