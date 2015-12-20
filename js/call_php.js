@@ -1,7 +1,7 @@
 $(document).ready(function () {
  //   window.onload = function() {
 //$("#listadosucursales").load('http://integradora.byethost15.com/php/listado_sucursales.php');
-
+alert(this.URL);
     $.ajax({
         url: "http://integradora.byethost15.com/php/listado_sucursales.php",
         type: "GET",
