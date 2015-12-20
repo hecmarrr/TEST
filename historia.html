@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>BARCELONA SPORTING CLUB | El ídolo del Ecuador - Sitio Oficial</title>
+	<link rel="icon" href="img/favicon.png" type="img/png" />
+	<link rel="apple-touch-icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link rel="stylesheet" href="css/content.css" type="text/css" />
+	<link rel="stylesheet" href="css/galeria.css" type="text/css" />
+	<link rel="stylesheet" href="lib/acordeon/acordeon.css" type="text/css" />
+	<link rel="stylesheet" href="lib/fancybox/jquery.fancybox.css" type="text/css" />
+	<link rel="stylesheet" href="lib/fancybox/helpers/jquery.fancybox-thumbs.css" type="text/css" />
+	<?php include ("php/analyticstracking.php") ?>
+</head>
+<body>
+	<header>
+		<?php include 'html/header.html' ?>
+		<?php include 'html/main_menu.html' ?>
+	</header>
+	<section id="content">
+		<!--********************************************************************************-->
+		<!--SECTION*************************************************************************-->
+		<!--********************************************************************************-->
+		<section class="section">
+			<h1>HISTORIA</h1>
+			<section class="full_news_pos">
+				<article class="full_news_article">
+					<figure class="figure">
+						<img src="img/elclub/historia.jpg">
+					</figure>
+					<div id="main_slider_shadow"><img src="img/main_slider_shadow.png"></div>
+					<hr class="news_endline">
+					<div class="news_paragraph">
+						<div class="normal_text">
+							<b>El 1 de mayo de 1925</b> en el barrio del Astillero nace Barcelona Sporting Club.
+							<br><br>
+							(<b>Foto</b> primer equipo 1926)
+							<br>
+							Arriba; Guillermo Miñán, Rigoberto Aguirre y Carlos Sangster.
+							<br>
+							En medio; Vargas, Manuel Murillo Moya y Otón Márquez de la Plata.
+							<br>
+							Abajo; Gonzalo Zevallos, José Morla, Pacheco, Criollo y Rafael VIteri.
+						</div>
+					</div>
+				</article>
+			</section>
+		</section>
+		<section class="section">
+			<div class="full_news_pos">
+				<div class="display_block">
+					<div class="galeria_block">
+						<h2>14 CAMPEONATOS</h2>
+						<figure class="figure"><a href="historia_14campeonatos.php"><img src="img/elclub/historia/14_campeonatos/portada.jpg"></a></figure>
+						<figure class="block_info_shadow"><img src="img/block_shadow.png"></figure>
+					</div>
+					<div class="galeria_block">
+						<h2>LEYENDAS</h2>
+						<figure class="figure"><a href="historia_leyendas.php"><img src="img/elclub/historia/leyendas/portada.jpg"></a></figure>
+						<figure class="block_info_shadow"><img src="img/block_shadow.png"></figure>
+					</div>
+					<div class="galeria_block">
+						<h2>PARTIDOS MEMORABLES</h2>
+						<figure class="figure"><a href="historia_partidos_memorables.php"><img src="img/elclub/historia/partidos_memorables/portada.jpg"></a></figure>
+						<figure class="block_info_shadow"><img src="img/block_shadow.png"></figure>
+					</div>
+				</article>
+			</section>
+		</section>
+	</section>
+	<!--********************************************************************************-->
+	<!--FOOTER**************************************************************************-->
+	<!--********************************************************************************-->
+	<footer>
+		<?php include 'html/footer.html' ?>
+	</footer>
+</body>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="lib/acordeon/acordeon.js"></script>
+<script type="text/javascript" src="js/sub_menu.js"></script>
+<script type="text/javascript" src="lib/fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript" src="lib/fancybox/jquery.fancybox.pack.js"></script>
+<script type="text/javascript" src="lib/fancybox/helpers/jquery.fancybox-thumbs.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$(".fancybox_thumb").fancybox({
+			prevEffect	: 'none',
+			nextEffect	: 'none',
+			helpers	: {
+				title	: {
+					type: 'outside'
+				},
+				thumbs	: {
+					width	: 150,
+					height	: 72
+				}
+			}
+		});
+	});
+</script>
+</html>

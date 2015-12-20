@@ -1,71 +1,98 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-	<head>
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-		<title>PARQUE TRAVIESURAS</title>
-		<link rel="icon" href="favicon.png" type="img/png" />
-		<link rel="apple-touch-icon" href="img/favicon.png">
-		<link rel="stylesheet" href="css/main.css" type="text/css" />
-		<link rel="stylesheet" href="css/home.css" type="text/css" />
-		<link rel="stylesheet" href="lib/bx_slider/jquery.bxslider.css" type="text/css" />
-        <link rel="stylesheet" href="lib/acordeon/acordeon.css" type="text/css" />
-	</head>
-	<body>
-		<header id="hed">
-		</header>
-		<div id="main_slider">
-            <div id="main_slider_container" class="slider">
-                <div><img src="img/main_slider/home02.jpg"></div>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>LABORATORIOS CLINICOS</title>
+	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
+	<link rel="apple-touch-icon" href="img/favicon.png">
+	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link rel="stylesheet" href="lib/bx_slider/jquery.bxslider.css" type="text/css" />
+	<link rel="stylesheet" href="lib/acordeon/acordeonmenu.css" type="text/css" />
+</head>
+<body>
+	<header id="header">
+	</header>
+	<div id="main_slider">
+		<div id="main_slider_container" class="slider">
+			<div><img src="img/main_slider/home02.jpg"></div>
                 <div><img src="img/main_slider/home04.jpg"></div>
                 <div><img src="img/main_slider/home03.jpg"></div>
-
-
-            </div>
+			
 		</div>
+	</div>
+	<section id="content">
+		<section class="section">
+			<section class="block_pos">
+				<article class="block_info">
+					<header>
+						<figure class="block_info_image">
+							<a href="locales.html">
+							<img src="img/sucursales-img.jpg">
+							</a>
+						</figure>
+					</header>
+					<p class="block_info_text">
+						<center><strong>SUCURSALES</strong></center>
+					</p>
+					
+				</article>
+			</section>
+			
+			<section class="block_pos">
+				<article class="block_info">
+					<header>
+						<figure class="block_info_image">
+							<a href="calculadora.html">
+							<img src="img/muestras-img.jpg">
+							</a>
+						</figure>
+					</header>
+					<p class="block_info_text">
+						<center><strong>CALCULADORA DE EXAMENES</strong></center>
+					</p>
+				</article>
+			</section>
 
-        <div id="mobile_intro">
-        	<div class="txt_intro">
-            	Lorem Ipsum es simplemente el texto
-                de relleno de las imprentas y archivos de texto.
-
-            </div><div class="img_intro">
-            	<img src="img/doctors.jpg">
-            </div>
-
-        </div>
-
-        <div class="btn_content">
-            <div class="block_mobile">
-            	<img src="img/sucursales.jpg" class="img-block-mobile">
-                <a href="locales2.html">
-                	<span class="caption">
-                    	<img src="img/pin.png"><span>SUCURSALES</span>
-                    </span>
-                </a>
-            </div>
-        	<div class="block_mobile">
-            	<img src="img/muestras.jpg" class="img-block-mobile">
-                <a href="calculadora.html">
-                	<span class="caption calc">
-                		<img src="img/checklist.png"><span>CALCULADORA DE EXAMENES</span>
-                    </span>
-                </a>
-            </div>
-		</div>
 
 
+		</section>
+	</section>
+	
+	<!--********************************************************************************-->
+	<!--FOOTER**************************************************************************-->
+	<!--********************************************************************************-->
+	<footer id="footer">
+	</footer>
+</body>
+<script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script type="text/javascript" src="lib/bx_slider/jquery.bxslider.js"></script>
+<script type="text/javascript" src="lib/acordeon/acordeon.js"></script>
+<script type="text/javascript" src="js/principal.js"></script>
+<script type="text/javascript">
 
+$(document).ready(function(){
+	$('.slider').bxSlider({
+		preloadImages: 'visible',
+		slideMargin: 0,
+		controls: true,
+		responsive: true,
+		pager: false,
+		mode: 'fade',
+		auto: true,
+		pause: 6000
+	});
 
-		<!--********************************************************************************-->
-		<!--FOOTER**************************************************************************-->
-		<!--********************************************************************************-->
-		<footer id="foot">
-		</footer>
-	</body>
-    <script type="text/javascript" src="js/jquery-1.9.1.min.js"></script>
-	<script type="text/javascript" src="lib/bx_slider/jquery.bxslider.js"></script>
-	<script type="text/javascript" src="js/sliders.js"></script>
-    <scripts type="text/javascript" src="lib/acordeon/acordeon.js"></scripts>
-	<script type="text/javascript" src="js/principal.js"></script>
+	$('.').bxSlider({
+		slideMargin: 0,
+		controls: true,
+		responsive: true,
+		pager: false,
+		mode: 'fade',
+		auto: false,
+		pause: 6000
+	});
+});
+
+</script>
 </html>

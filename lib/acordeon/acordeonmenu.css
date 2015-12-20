@@ -1,0 +1,254 @@
+/* root element for acordeon. decorated with rounded borders and gradient background image */
+.acordeon
+{
+    margin: 0;
+    width: auto;
+    font-family: HelveticaLTStd;
+}
+
+#menu_mobile .acordeon_item_titulo, #menu_mobile a, #menu_mobile a:hover, #menu_mobile a:link, #menu_mobile a:visited
+{
+    color: #000;
+    text-decoration: none;
+}
+
+#menu_mobile .panel
+{
+    color: #ffffff;
+    background-color: #02adc6;
+}
+
+#menu_mobile .acordeon_item_titulo, #menu_mobile .panel div
+{
+    border-bottom: 1px solid #333333;
+    text-decoration: none;
+}
+
+#menu_mobile .panel div:last-child
+{
+    border-bottom: none;
+}
+
+#menu_mobile .acordeon_item_titulo:hover, #menu_mobile a:hover
+{
+    color: #fff;
+    background-color: #02adc6;
+}
+
+#content_widget .ranking_widget .main_acordeon_title
+{
+    padding-left: 50px;
+    height: 80px;
+    font-size: 14px;
+    text-align: right;
+    /*background-image: url('../../img/publicidad/logo_widget.png');*/
+    background-position: 10px;
+    background-repeat: no-repeat;
+    background-size: 64px;
+    background-color: #fec500;
+    border: none;
+}
+
+.widget_triangle
+{
+    margin-top: -3px;
+    border-top: 2px solid #fec500;
+}
+
+.widget_triangle img
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 40px;
+    height: auto;
+}
+
+#content_widget 
+{
+    margin-top: -1px;
+    background-color: #fec500;
+    position: relative;
+    z-index: 0;
+}
+/*
+#content_widget .main_acordeon_title:hover
+{
+    background-color: #cccccc;
+}
+*/
+
+#content_widget #main_slider_shadow
+{
+    margin: auto;
+    position: absolute;
+    top: 2px;
+    left: 0;
+    right: 0;
+    z-index: 0;
+    width: 100%;
+}
+
+#content_widget .estadisticas_icon
+{
+    margin: auto;
+    width: 280px;
+    height: 30px;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    right: 0;
+    font-size: 30px;
+}
+
+#content_widget .estadisticas_icon div
+{
+    margin-left: 5px;
+    margin-right: 5px;
+    line-height: 30px;
+    display: inline-block;
+}
+
+#content_widget .estadisticas_icon img
+{
+    width: 30px;
+    height: 30px;
+}
+
+/* acordeon header */
+.acordeon .acordeon_item_titulo
+{
+    margin: 0;
+    padding: 15px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    color: #000000;
+    font-family: HelveticaLTStd;
+    border-bottom: 1px solid #eeeeee;
+    text-align: left;
+}
+
+/* acordeon_actually active header */
+.acordeon .acordeon_item_titulo.current
+{
+    margin: 0;
+    cursor: default;
+}
+
+.widget_powered_by
+{
+    width: auto;
+    height: 30px;
+    font-size: 10px;
+    line-height: 30px;
+    color: #666666;
+    font-family: klavika_r;
+    background: #eeeeee;
+}
+
+.widget_powered_by_img
+{
+    box-shadow: 0px 5px 15px -5px #999999;
+}
+
+.widget_powered_by_img img
+{
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.acordeon .panel
+{
+    margin: 0;
+    padding: 5px;
+    text-align: left;
+    display: none;
+    color: #ffffff;
+    font-size: 14px;
+    background-color: #ffffff;
+}
+
+#content_widget .acordeon .panel a:link, #content_widget .acordeon .panel a:hover, #content_widget .acordeon .panel a:visited
+{
+    text-decoration: none;
+    color: #000000;
+}
+
+.acordeon_close
+{
+    display: none;
+}
+
+.menu_mobile_first .acordeon_item_titulo div:first-child, .ranking_widget .acordeon_item_titulo div:first-child
+{
+    display: inline-block;
+    vertical-align: top;
+}
+
+#menu_mobile .menu_mobile_first_title
+{
+    height: 40px;
+    display: table-cell;
+    vertical-align: middle;
+    border-bottom: none;
+}
+
+.menu_mobile_first .panel div
+{
+    padding-left: 30px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+#content_widget .main_acordeon_title .acordeon_open, #content_widget .main_acordeon_title .acordeon_close
+{
+    margin-top: 25px;
+    font-size: 20px;
+}
+
+.acordeon_item_titulo .acordeon_open, .acordeon_item_titulo .acordeon_close
+{
+    float: right;
+}
+
+.acordeon .acordeon_item_titulo.current .acordeon_open
+{
+    display: none;
+}
+
+.acordeon .acordeon_item_titulo.current .acordeon_close
+{
+    display: block;
+}
+
+/*******************************************************/
+/*ACORDEON LICENCIAS************************************/
+/*******************************************************/
+
+.acordeon_licencias
+{
+    margin: 20px;
+    background-color: #ffffff;
+}
+
+.acordeon_licencias .acordeon_item_titulo
+{
+    text-align: center;
+}
+
+.acordeon_licencias .figure, .acordeon_licencias img
+{
+    max-width: 100%;
+    width: auto;
+    height: auto;
+}
+
+.acordeon_licencias .acordeon_item_titulo.current
+{
+    color: #ffffff;
+    background-color: #333333;
+}
+
+.acordeon_item_titulo:hover
+{
+    background-color: #eeeeee;
+}
