@@ -83,7 +83,7 @@ $(document).ready(function(){
 		pause: 6000
 	});
 
-	$('.').bxSlider({
+	/*$('.').bxSlider({
 		slideMargin: 0,
 		controls: true,
 		responsive: true,
@@ -91,16 +91,17 @@ $(document).ready(function(){
 		mode: 'fade',
 		auto: false,
 		pause: 6000
-	});
+	});*/
+	document.addEventListener("deviceready", onDeviceReady, false);
 
 	function onDeviceReady() {
-	    if (parseFloat(window.device.version) === 7.0) {
+	          alert("dev");
+	    if (parseFloat(window.device.version) >= 7.0) {
 	          document.body.style.marginTop = "20px";
 	          alert("dev");
 	    }
 	}
   
-	document.addEventListener('deviceready', onDeviceReady, false);
 
 });
 
