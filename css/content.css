@@ -1,6 +1,6 @@
 #content
 {
-	margin-top: auto;
+	/*margin-top: auto;*/
 }
 
 #full_screen_banner
@@ -121,7 +121,7 @@
 
 section:first-child h1
 {
-	margin-top: 70px;
+	margin: 0px;
 	height: 140px;
 	line-height: 140px;
 	background-image: url('../img/sub-banner.jpg');
@@ -133,6 +133,7 @@ section:first-child h1
 h1
 {
 	padding-left: 8%;
+	width: 92%;
 	text-align: left;
 	background-color: #eeeeee;
 }

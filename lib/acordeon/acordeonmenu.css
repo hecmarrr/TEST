@@ -8,19 +8,19 @@
 
 #menu_mobile .acordeon_item_titulo, #menu_mobile a, #menu_mobile a:hover, #menu_mobile a:link, #menu_mobile a:visited
 {
-    color: #000;
+    color: #fff;
     text-decoration: none;
 }
 
 #menu_mobile .panel
 {
-    color: #ffffff;
+    color: #fff;
     background-color: #02adc6;
 }
 
 #menu_mobile .acordeon_item_titulo, #menu_mobile .panel div
 {
-    border-bottom: 1px solid #333333;
+    border-bottom: 1px solid #eee;
     text-decoration: none;
 }
 
@@ -33,6 +33,7 @@
 {
     color: #fff;
     background-color: #02adc6;
+    font-weight: bold;
 }
 
 #content_widget .ranking_widget .main_acordeon_title
@@ -121,7 +122,6 @@
     padding: 15px 15px;
     font-size: 14px;
     cursor: pointer;
-    color: #000000;
     font-family: HelveticaLTStd;
     border-bottom: 1px solid #eeeeee;
     text-align: left;
@@ -190,6 +190,12 @@
     display: table-cell;
     vertical-align: middle;
     border-bottom: none;
+    color: #000;
+}
+
+.menu_mobile_first_title:hover
+{
+    color: #fff;
 }
 
 .menu_mobile_first .panel div

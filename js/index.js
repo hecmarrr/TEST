@@ -35,9 +35,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-        if (parseFloat(window.device.version) >= 7.0) {
-          document.body.style.marginTop = "20px";
-        }
+       
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {

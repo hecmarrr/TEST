@@ -7,74 +7,249 @@
 	<link rel="shortcut icon" type="image/ico" href="img/favicon.ico" />
 	<link rel="apple-touch-icon" href="img/favicon.png">
 	<link rel="stylesheet" href="css/main.css" type="text/css" />
+	<link rel="stylesheet" href="css/content.css" type="text/css" />
 	<link rel="stylesheet" href="lib/bx_slider/jquery.bxslider.css" type="text/css" />
 	<link rel="stylesheet" href="lib/acordeon/acordeonmenu.css" type="text/css" />
+	<link rel="stylesheet" href="lib/acordeon/acordeon.css" type="text/css" />
+	<link rel="stylesheet" href="css/sucursales.css"  type="text/css">
+	<link rel="stylesheet" href="css/style.min.css">
+
 </head>
 <body>
-	<header id="header">
-	</header>
-	<div id="main_slider">
-		<div id="main_slider_container" class="slider">
-			<div><img src="img/main_slider/home02.jpg"></div>
-                <div><img src="img/main_slider/home04.jpg"></div>
-                <div><img src="img/main_slider/home03.jpg"></div>
-			
-		</div>
-	</div>
-	<section id="content">
-		<section class="section">
-			<section class="block_pos">
-				<article class="block_info">
-					<header>
-						<figure class="block_info_image">
-							<a href="locales.html">
-							<img src="img/sucursales-img.jpg">
-							</a>
-						</figure>
-					</header>
-					<p class="block_info_text">
-						<center><strong>SUCURSALES</strong></center>
-					</p>
-					
-				</article>
-			</section>
-			
-			<section class="block_pos">
-				<article class="block_info">
-					<header>
-						<figure class="block_info_image">
-							<a href="calculadora.html">
-							<img src="img/muestras-img.jpg">
-							</a>
-						</figure>
-					</header>
-					<p class="block_info_text">
-						<center><strong>CALCULADORA DE EXAMENES</strong></center>
-					</p>
-				</article>
-			</section>
-
-
-
-		</section>
+	<section id="intro">
+		<article>
+			<div><img src="img/logo02.png"></div>
+		</article>
 	</section>
 	
-	<!--********************************************************************************-->
-	<!--FOOTER**************************************************************************-->
-	<!--********************************************************************************-->
-	<footer id="footer">
-	</footer>
+	<header id="header">
+		
+			<div id="logo_container">
+				<div id="logo"><img src="img/logo2.png"></div>
+			</div>
+			<nav id="menu_mobile" class="acordeon">
+				<div class="menu_mobile_first_title acordeon_item_titulo">
+					<div class="menu_main_icon"></div>
+					<div class="menu_main_icon"></div>
+					<div class="menu_main_icon"></div>
+				</div>
+				<div class="menu_mobile_first panel">
+					<div class="acordeon_item_titulo"><a href="locales.html" target="_self">SUCURSALES</a></div>
+					<div class="acordeon_item_titulo"><a href="calculadora.html" target="_self">CALCULADORA</a></div>
+				</div>
+			</nav>
+		
+	</header>
+
+	<!--HOME**************************************************************************-->	
+	<section id="home" class="content_section">
+		<div id="main_slider">
+			<div id="main_slider_container" class="slider">
+				<div><img src="img/main_slider/home02.jpg"></div>
+	                <div><img src="img/main_slider/home04.jpg"></div>
+	                <div><img src="img/main_slider/home03.jpg"></div>
+				
+			</div>
+		</div>
+		<section id="content" class="home_section">
+			<section class="block_pos" id="btn_suc">
+				<article class="block_info locales_btn">
+					<div>
+						<header>
+							<figure class="block_info_image">
+								<img src="img/sucursales-img.jpg">
+							</figure>
+						</header>
+						<p class="block_info_text"><center><strong>SUCURSALES</strong></center></p>
+					</div>
+				</article>
+			</section>
+				
+			<section class="block_pos" id="btn_calc">
+				<article class="block_info locales_btn">
+					<div>
+					<header>
+						<figure class="block_info_image">
+							<img src="img/muestras-img.jpg">
+						</figure>
+					</header>
+					<p class="block_info_text"><center><strong>CALCULADORA DE EXAMENES</strong></center>
+					</p>
+					</div>
+				</article>
+			</section>	
+		</section>
+	</section>
+	<!--LOCALES**************************************************************************-->
+	<section id="locales" class="content_section">
+		<section id="content">
+	        <section class="section">
+	            <h1>SUCURSALES</h1>
+	            <section class="full_news_pos">
+	                <div class="block_half">
+	                    <div class="acordeon_suc" id="listadosucursales" >
+	                    </div>
+	                </div>
+	                <div id="mapas" class="block_half">
+	                    <div id="mapa">
+	                        
+	                    </div>
+	                    <div class="btn_location" id="llegar" onclick="localizame()">
+	                        <span><img src="img/pointer2.png"></span>
+	                        <span>Como llegar</span>
+	                    </div>
+	                    <div class="block_info_cont" id="busquedasucursales">
+	                    </div>
+	                    
+	                    
+	                </div>
+	            </section>
+	        </section>
+	    </section>
+	</section>
+
+<!--CALCULADORA **************************************************************************-->
+	<section id="calculadora" class="content_section">
+		<section id="content">
+	        <section class="section">
+	            <h1>CALCULADORA DE EXAMENES</h1>
+	            <section class="full_news_pos">
+
+	            	<div id="o-wrapper" class="o-wrapper">
+
+						<main class="o-content">
+						    <div class="o-container">
+						    	 <div class="icon-calc" id="c-button--slide-right"></div>
+						    	<div class="search-container">
+						        	<div id="search-bar" class="search-bar">
+						            	<div>
+						                	<input type="text" value="Buscar..." class="search-input" name="search-input" id="search-input">
+						                    <div id="search-btn" class="search-icon"></div>
+						                </div>
+						            </div>
+						            
+						            <div class="letter-bar">
+						            	<span class="alfabet" id="a">A</span>
+						                <span class="alfabet" id="b">B</span>
+						                <span class="alfabet" id="c">C</span>
+						                <span class="alfabet" id="d">D</span>
+						                <span class="alfabet" id="e">E</span>
+						                <span class="alfabet" id="f">F</span>
+						                <span class="alfabet" id="g">G</span>
+						                <span class="alfabet" id="h">H</span>
+						                <span class="alfabet" id="i">I</span>
+						                <span class="alfabet" id="j">J</span>
+						                <span class="alfabet" id="k">K</span>
+						                <span class="alfabet" id="l">L</span>
+						                <span class="alfabet" id="m">M</span>
+						                <span class="alfabet" id="n">N</span>
+						                <span class="alfabet" id="o">O</span>
+						                <span class="alfabet" id="p">P</span>
+						                <span class="alfabet" id="q">Q</span>
+						                <span class="alfabet" id="r">R</span>
+						                <span class="alfabet" id="s">S</span>
+						                <span class="alfabet" id="t">T</span>
+						                <span class="alfabet" id="u">U</span>
+						                <span class="alfabet" id="v">V</span>
+						                <span class="alfabet" id="w">W</span>
+						                <span class="alfabet" id="x">X</span>
+						                <span class="alfabet" id="y">Y</span>
+						                <span class="alfabet" id="z">Z</span>
+						              
+						            </div>
+						            <br>
+						            <div id="calculadora-mini">
+						            
+						            <div id="calc-mini" class="calc-mini">
+						            
+						            <div class="calc-title">CALCULADORA</div> <hr>
+						            </div>
+						            <div class="total-mini">TOTAL: $ <span id="total-result"> 00.00</span></div>
+						            </div>
+						        </div>
+						        
+						        <div class="exam-container">
+						        	<div class="border-top-container">
+						            	<div></div>
+						                <div></div>
+						                <div></div>
+						            </div>
+						            <div class="info-container">
+						            	<div class="title">COTIZA TU EXAMEN</div>
+						                
+						                <div class="info-bar">
+						                	<div class="name-bar">
+						                    	<div class="title-exam"></div>
+						                    </div>
+						                </div>
+						                
+						                <div class="content-list">
+						                	<div class="loading-gif">
+						                    	<img src="img/loading.gif">
+						                    </div>
+						            
+						                </div>
+						            </div>
+						            <div class="border-bottom-container">
+						            	<div></div>
+						                <div></div>
+						                <div></div>
+						            </div>
+						            <div class="footer">
+						            <span>*Aplican restricciones, precios normales, sin descuento de tarjetas, ni recargo de tarjeta de crédito.
+									<br>*Precios de fin de semana y exámenes al extranjero varían.</span>
+						            </div>
+						        </div>
+						      
+						  
+
+						    </div><!-- /o-container -->
+						</main><!-- /o-content -->
+
+						 
+						</div><!-- /o-wrapper -->
+
+
+						<nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
+						  <div class="c-menu__close"><button class="c-menu__close c-menu-title">CALCULADORA </button> <div class="icon-calc-white"></div></div>
+						  <div class="menu-content">
+						  	
+						  </div>
+						  <br><br><br>
+						  <div class="menu-total">
+						      <div>TOTAL: </div>
+						      <div class="menu-result">$ <span id="precio-result">00.00</span></div>
+						  </div>
+						  
+						</nav><!-- /c-menu slide-right -->
+
+
+						<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
+
+
+	            </section>
+	        </section>
+	    </section>
+	</section>
+
 </body>
 <script type="text/javascript" src="js/jquery.tools.min.js"></script>
+<script src="http://maps.googleapis.com/maps/api/js?key=AIzaSyC-e9Xb3N-qfbwBydi6qnV7KE8UStS1zEs"></script>
+<script type="text/javascript" src="js/call_php.js"></script>
+<script src="js/content.js"></script>
+<script src="js/dist/menu.js"></script>
+<script src="js/calculadora.js"></script>
 <script type="text/javascript" src="lib/bx_slider/jquery.bxslider.js"></script>
 <script type="text/javascript" src="lib/acordeon/acordeon.js"></script>
-<script type="text/javascript" src="js/principal.js"></script>
+
 <script type="text/javascript">
 
 $(document).ready(function(){
+	
+	$( "#intro" ).delay( 1000 ).fadeOut( 200 );
+	
+
 	$('.slider').bxSlider({
-		preloadImages: 'visible',
-		slideMargin: 0,
 		controls: true,
 		responsive: true,
 		pager: false,
@@ -83,15 +258,20 @@ $(document).ready(function(){
 		pause: 6000
 	});
 
-	/*$('.').bxSlider({
-		slideMargin: 0,
-		controls: true,
-		responsive: true,
-		pager: false,
-		mode: 'fade',
-		auto: false,
-		pause: 6000
-	});*/
+
+	var slideRight = new Menu({
+	    wrapper: '#o-wrapper',
+	    type: 'slide-right',
+	    menuOpenerClass: '.c-button',
+	    maskId: '#c-mask'
+	  });
+
+	  var slideRightBtn = document.querySelector('#c-button--slide-right');
+	  
+	  slideRightBtn.addEventListener('click', function(e) {
+	    e.preventDefault;
+	    slideRight.open();
+	  });
 });
 
 </script>

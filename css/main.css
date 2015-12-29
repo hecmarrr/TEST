@@ -49,15 +49,25 @@ font
 
 /***********************************************************/
 
+html
+{
+	width: 100%;
+	height: 100%;
+	max-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
 body
 {
 	margin: 0;
 	padding: 0;
-	height: auto;
 	font-family: HelveticaLTStd;
 	text-align: center;
 	font-size: 14px;
 	background-color: #ffffff;
+	width: 100%;
+	height: 100%;
 }
 
 img
@@ -82,12 +92,12 @@ header h2, header p
 {
 	margin: 0;
 	width: 100%;
-	height: 70px;
+	height: 10%;
 	text-align: center;
 	background-color: #fff;
-	position: fixed;
+	/*position: fixed;*/
 	top: 0;
-	z-index: 10000;
+	z-index: -1;
 }
 
 #logo_container
@@ -116,7 +126,7 @@ header h2, header p
 #menu_bar
 {
 	width: auto;
-	height: 70px;
+	height: 9%;
 	position: absolute;
 	margin: auto;
 	top: 0;
@@ -202,9 +212,10 @@ header h2, header p
 {
 	margin: 0;
 	padding: 0;
-	display: none;
+	/*display: none;*/
+	height: 100%;
 	text-align: left;
-	box-shadow: 0px 5px 15px -5px #000000;
+	box-shadow: 0px 5px 15px -5px #ddd;
 }
 
 /***********************************************************/
@@ -214,9 +225,9 @@ header h2, header p
 #main_slider
 {
 	margin: 0;
-	margin-top: 70px;
+	/*margin-top: 70px;*/
 	width: 100%;
-	height: auto;
+	height: 60%;
 	background-color: #ffffff;
 	overflow: hidden;
 	position: relative;
@@ -265,14 +276,20 @@ header h2, header p
 /*CONTENT*/
 /***********************************************************/
 
+
+.content_section
+{
+	width: 100%;
+	height: 89%;
+}
+
 #content
 {
 	margin-left: auto;
 	margin-right: auto;
-	width: auto;
-	height: auto;
+	/*width: auto;
+	height: auto;*/
 	text-align: center;
-	background-color: #eeeeee;
 	color: #333333;
 }
 
@@ -281,8 +298,8 @@ header h2, header p
 	width: 100%;
 	height: auto;
 	text-align: center;
-	box-shadow: 0px 5px 15px -5px #666666;
-	overflow: hidden;
+	/*box-shadow: 0px 5px 15px -5px #666666;
+	overflow: hidden;*/
 }
 
 .section:nth-child(odd)
@@ -292,15 +309,7 @@ header h2, header p
 	background-color: #ffffff;
 }
 
-.section:nth-child(odd) .block_pos .block_info
-{
-	/*border-bottom: 4px solid #cccccc;*/
-}
 
-.section:nth-child(odd) .block_pos .block_info:hover
-{
-	/*border-bottom: 4px solid #fec500;*/
-}
 
 .section:nth-child(even)
 {
@@ -374,6 +383,13 @@ header h2, header p
 	font-weight: bold;
 	font-size: 20px;
 	text-align: left;
+}
+
+
+.home_section
+{
+	width: 100%;
+	height: 40%;
 }
 
 /******************************************
@@ -538,54 +554,7 @@ SOCIAL MEDIA BLOCK
 	height: auto;
 }
 
-.wallpapers a
-{
-	text-decoration: none;
-}
 
-.wallpapers .front_img
-{
-	max-width: 480px;
-	width: 100%;
-	height: auto;
-	margin: auto;
-	position: absolute;
-	top: 0;
-	bottom: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
-}
-
-.wallpapers h1,.wallpapers h5
-{
-	color: #ffffff;
-	font-weight: normal;
-	text-align: center;
-}
-
-.ad
-{
-	padding-top: 10px;
-	padding-bottom: 10px;
-	height: auto;
-	position: relative;
-}
-
-.ad .block_pos
-{
-	margin: 1%;
-	max-width: 286px;
-	width: 30%;
-	height: auto;
-}
-
-.ad .block_pos img
-{
-	max-width: 100%;
-	width: auto;
-	height: auto;
-}
 
 .section:nth-child(3) .block_pos .block_info, .section:nth-child(3) .block_pos .block_info:hover
 {
@@ -642,11 +611,12 @@ h1
 
 .block_info
 {
-	margin-left: auto;
-	margin-right: auto;
+	/*margin-left: auto;
+	margin-right: auto;*/
 	width: 286px;
-	height: auto;
+	height: 100%;
 	text-align: left;
+	margin:auto;
 }
 
 h2
@@ -685,103 +655,23 @@ h2
 
 .block_pos
 {
-	margin-top: 25px;
+	/*margin-top: 25px;
 	margin-left: 5px;
 	margin-right: 5px;
-	margin-bottom: 10px;
-	width: 300px;
-	height: auto;
+	margin-bottom: 10px;*/
+	width: 48%;
+	height: 100%;
 	display: inline-block;
-	vertical-align: top;
 	text-align: center;
-	position: relative;
+	cursor: pointer;
 }
 
-.noticias_home .block_pos .block_info .block_info_image, .noticias_home .block_pos .block_info .block_info_shadow, .block_info_shadow .block_pos .block_info .block_info_shadow
-{
-	max-width: 286px;
-	width: 100%;
-}
-
-.noticias_home .block_pos .block_info .block_info_image img, .noticias_home .block_pos .block_info .block_info_shadow img, .ad .block_pos .block_info .block_info_shadow img
-{
-	max-width: 286px;
-	width: 100%;
-	height: auto;
-}
-
-.news_date_title
-{
-	margin-top: 0;
-	width: 266px;
-	height: 45px;
-	line-height: 35px;
-	text-align: left;
-	font-size: 12px;
-	position: absolute;
-	bottom: 0;
-	border-top: 1px solid #eeeeee;
-}
-
-.block_info .news_date_title
-{
-	padding: 10px;
-}
-
-.generic_btn
-{
-	margin: 1%;
-	margin-bottom: 10px;
-	max-width: 1024px;
-	width: 300px;
-	height: 40px;
-	display: inline-block;
-	vertical-align: top;
-	background-color: #fec500;
-	color: #000000;
-	line-height: 40px;
-}
-
-.generic_btn a
-{
-	color: #000000;
-	text-decoration: none;
-}
 
 header
 {
 	position: relative;
 }
 
-.calendar_icon
-{
-	display: inline-block;
-	vertical-align: top;
-}
-
-.calendar_icon:first-child
-{
-	margin-top: 8.5px;
-	padding-right: 5px;
-}
-
-.calendar_icon img
-{
-	width: 14px;
-	height: auto;
-}
-
-iframe,.videos
-{
-	margin-left: auto;
-	margin-right: auto;
-	margin-bottom: 30px;
-	max-width: 569px;
-	width: 100%;
-	height: 320px;
-	text-align: center;
-	border: 0;
-}
 
 @media (max-width: 933px) and (min-width: 627px){
 
@@ -809,7 +699,7 @@ iframe,.videos
 	*/
 }
 
-@media (max-width: 1023px) and (min-width: 320px){
+@media (max-width: 1024px) and (min-width: 320px){
 
 	#logo_container
 	{
@@ -869,10 +759,10 @@ iframe,.videos
 
 	.block_pos
 	{
-		width: auto;
-		height: auto;
+		/*width: auto;
+		height: auto;*/
 		font-size: 12px;
-		text-align: left;
+		/*text-align: left;*/
 	}
 
 	.block_info_shadow
@@ -1082,4 +972,53 @@ iframe,.videos
 .xdebug-error
 {
 	display: none;
+}
+
+#locales, #calculadora
+{
+	display: none;
+}
+
+#intro
+{
+	width: 100%;
+	height: 100%;
+	background-color: #02adc6;
+	position: fixed;
+    z-index: 100;
+}
+
+#home{
+
+	/*display: none;*/
+}
+
+#intro article
+{
+	display: table;
+	width: 100%;
+	height: 100%;
+}
+
+#intro div
+{
+	display: table-cell;
+	vertical-align: middle;
+}
+
+#intro div img
+{
+	margin: auto;
+	max-width: 65%;
+}
+
+.locales_btn
+{
+	display: table;
+}
+
+.locales_btn div
+{
+	display: table-cell;
+	vertical-align: middle;
 }

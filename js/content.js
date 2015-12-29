@@ -1,12 +1,35 @@
-﻿//GOOGLE MAPS////////////////////////////////////////////////////////
+﻿// MENUU//
+var section;
 
-var marker;
 
 var latitude = -2.173278;
 var longitude = -79.898786;
+var zoom = 16;
+
+$("#btn_suc").click(function(e) {
+    $(".content_section").hide();
+    $("#locales").show();
+    load_map(latitude, longitude,zoom);
+});
+
+$("#btn_calc").click(function(e) {
+    $(".content_section").hide();
+    $("#calculadora").show();
+});
 
 
-var zoom;
+$("#logo").click(function(e) {
+    $(".content_section").hide();
+    $("#home").show();
+});
+
+
+
+
+//GOOGLE MAPS////////////////////////////////////////////////////////
+
+var marker;
+
 var map_pos = new google.maps.LatLng(latitude, longitude);
 var mapOptions = {
 	zoom: 16,
