@@ -128,12 +128,12 @@ section:first-child h1
 	background-repeat: no-repeat;
 	background-position: center;
 	background-size: cover;
+	width: 100%;
+	padding-left: 5%;
 }
 
 h1
 {
-	padding-left: 8%;
-	width: 92%;
 	text-align: left;
 	background-color: #eeeeee;
 }

@@ -32,7 +32,7 @@
 #menu_mobile .acordeon_item_titulo:hover, #menu_mobile a:hover
 {
     color: #fff;
-    background-color: #02adc6;
+/*    background-color: #02adc6;*/
     font-weight: bold;
 }
 
@@ -253,8 +253,8 @@
     color: #ffffff;
     background-color: #333333;
 }
-
+/*
 .acordeon_item_titulo:hover
 {
     background-color: #eeeeee;
-}
+}*/

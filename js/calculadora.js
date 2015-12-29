@@ -126,6 +126,7 @@
                 
                 if ($( "#" +exam_id ).hasClass( "check-item" ))
                 {
+                    
                     precio_sel = parseFloat(evt.target.value);
 
                     exam_id = evt.target.id;

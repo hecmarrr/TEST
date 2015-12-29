@@ -48,7 +48,7 @@ marker = new google.maps.Marker({
 });
 
 
-$("#1").show();
+$("#suc1").show();
 
 /*bounds.extend(map_pos);
 map.fitBounds(bounds);

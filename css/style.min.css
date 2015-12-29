@@ -13,7 +13,7 @@
 
 #carbonads,.c-mask,.c-menu
 {
-	position:fixed
+	position:absolute;
 }
 
 
@@ -623,7 +623,7 @@ input[type=checkbox] {
 /* MENU DESPLEGABLE */
 .c-menu
 {
-	z-index:2000;
+	z-index:1000;
 	background-color:#34ab83;
 	transition:transform .3s
 }
