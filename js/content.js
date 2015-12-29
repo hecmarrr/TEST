@@ -7,14 +7,19 @@ var longitude = -79.898786;
 var zoom = 16;
 
 $("#btn_suc").click(function(e) {
-    $(".content_section").hide();
-    $("#locales").show();
-    load_map(latitude, longitude,zoom);
+    show_suc();
 });
 
 $("#btn_calc").click(function(e) {
-    $(".content_section").hide();
-    $("#calculadora").show();
+    show_calc();
+});
+
+$("#btn_suc_menu").click(function(e) {
+    show_suc();
+});
+
+$("#btn_calc_menu").click(function(e) {
+    show_calc();
 });
 
 
@@ -24,7 +29,18 @@ $("#logo").click(function(e) {
 });
 
 
+function show_calc()
+{
+   $(".content_section").hide();
+    $("#calculadora").show(); 
+}
 
+function show_suc()
+{
+    $(".content_section").hide();
+    $("#locales").show();
+    load_map(latitude, longitude,zoom);
+}
 
 //GOOGLE MAPS////////////////////////////////////////////////////////
 
