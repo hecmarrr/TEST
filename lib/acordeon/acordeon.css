@@ -81,3 +81,13 @@
     height: 25px;
     float: right;
 }
+
+
+@media (orientation: landscape) and (max-width: 480px) {
+
+    .acordeon_suc .acordeon_item_titulo_suc
+    {
+        font-size: 12px;
+    }
+}
+

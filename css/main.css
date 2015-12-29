@@ -198,14 +198,13 @@ header h2, header p
 
 .menu_main_icon
 {
-	margin-right: auto;
-	margin-top: 5px;
-	margin-bottom: 5px;
-	width: 20px;
-	height: 20px;
-	background-image: url("../img/left207.png");
-	background-size: contain;
-	display: none;
+    margin-right: auto;
+    width: 25px;
+    height: auto;
+    background-image: url("../img/left207.png");
+    background-size: cover;
+    display: table-cell;
+    vertical-align: middle;
 }
 
 #menu_mobile
@@ -893,68 +892,85 @@ header
 	}
 }
 
-/***********************************************************/
-/*PRE FOOTER*/
-/***********************************************************/
 
-.pre_footer
-{
-	padding-top: 20px;
-	padding-bottom: 20px;
-	height: auto;
-	border-top: 2px solid #2d2d2f;
-	background: linear-gradient(#373737, #282828);
-	box-shadow: 0px 8px 10px -5px #000000;
-	position: relative;
+@media (orientation: portrait) {
+
+	#main_slider {
+		height: 30%;
+	}
+
+	.block_pos
+	{
+		width: 95%;
+		height: auto;
+	}
+
+	.menu_main_icon {
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: contain;
+	}
 }
 
-.pre_footer_image
-{
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-	max-width: 48px;
-	width: 100%;
-	display: inline-block;
-	vertical-align: top;
+
+@media (orientation: portrait) and (max-width: 320px) {
+
+
+	#header
+	{
+		height: 12%;
+
+	}
+
+
+	section:first-child h1 {
+	    margin: 0px;
+	    height: 80px;
+	    line-height: 80px;
+	    font-size: 20px;
+	}
+
 }
 
-.pre_footer_image img
-{
-	max-width: 100%;
-	width: 48px;
-	height: auto;
-	display: inline-block;
-}
+@media (orientation: landscape) and (max-width: 480px) {
 
-.pre_footer_brands
-{
+	.content_section
+	{
+		height: 85%;
+	}
 
-	padding-top: 10px;
-	padding-bottom: 10px;
-	height: auto;
-	border-bottom: 2px solid #1f1f1f;
-	background: #252525;
-}
+	#header
+	{
+		height: 14%;
+	}
 
-.pre_footer_brands_pos
-{
-	margin-top: 5px;
-	margin-bottom: 5px;
-	margin-left: 10px;
-	margin-right: 10px;
-	max-width: 96px;
-	width: 100%;
-	display: inline-block;
-	vertical-align: top;
-}
+	#logo img {
+	    max-width: 90px;
+	    width: auto;
+	    height: auto;
+	    margin: auto;
+	    vertical-align: middle;
+	    margin-top: 10px;
+	}
 
-.pre_footer_brands_pos img
-{
-	max-width: 100%;
-	width: 96px;
-	height: auto;
+	.block_info_text {
+		height: 10px;
+		margin: 0px;
+	}
+
+	.menu_main_icon {
+	    background-repeat: no-repeat;
+	    background-position: center;
+	    background-size: contain;
+	}
+
+	h1 {
+	    margin: 0px;
+	    height: 80px;
+	    line-height: 80px;
+	    font-size: 20px;
+	}
+
 }
 
 /***********************************************************/

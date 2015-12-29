@@ -186,9 +186,8 @@
 
 #menu_mobile .menu_mobile_first_title
 {
-    height: 40px;
-    display: table-cell;
-    vertical-align: middle;
+    height: 100%;
+    display: table;
     border-bottom: none;
     color: #000;
 }

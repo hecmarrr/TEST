@@ -405,9 +405,9 @@ input[type=checkbox] {
 	
 }
 
-#calculadora
+#calculadora-mini
 {
-	/*display:none;*/
+	display:none;
 }
 
 .item-list-menu-mini
@@ -624,6 +624,13 @@ input[type=checkbox] {
 }
 
 
+@media (orientation: portrait) {
+
+	.c-menu
+	{
+		padding-top: 80px;
+	}
+}
 
 /* MENU DESPLEGABLE */
 .c-menu

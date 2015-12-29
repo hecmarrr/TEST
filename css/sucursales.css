@@ -192,6 +192,7 @@ ul ul {
 	#mapas
 	{
 		width:100%;
+		max-width: 98%;
 	}
 	
 	.mini-gallery div {
@@ -202,3 +203,4 @@ ul ul {
 		margin-left:0px;
 	}
 }
+

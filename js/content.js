@@ -1,6 +1,6 @@
 ﻿// MENUU//
 var section;
-
+$(".menu_main_icon").hide();
 
 var latitude = -2.173278;
 var longitude = -79.898786;
@@ -27,7 +27,7 @@ $("#logo").click(function(e) {
     show_home();
 });
 
-$(".menu_main_icon").click(function(e) {
+$("#header").click(function(e) {
     show_home();
 });
 
