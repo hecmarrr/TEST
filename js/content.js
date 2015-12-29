@@ -24,20 +24,31 @@ $("#btn_calc_menu").click(function(e) {
 
 
 $("#logo").click(function(e) {
-    $(".content_section").hide();
-    $("#home").show();
+    show_home();
 });
 
+$(".menu_main_icon").click(function(e) {
+    show_home();
+});
+
+
+function show_home(){
+    $(".content_section").hide();
+    $("#home").show();
+    $(".menu_main_icon").hide();
+}
 
 function show_calc()
 {
    $(".content_section").hide();
+   $(".menu_main_icon").show();
     $("#calculadora").show(); 
 }
 
 function show_suc()
 {
     $(".content_section").hide();
+    $(".menu_main_icon").show();
     $("#locales").show();
     load_map(latitude, longitude,zoom);
 }

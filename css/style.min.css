@@ -13,7 +13,7 @@
 
 #carbonads,.c-mask,.c-menu
 {
-	position:absolute;
+	position:fixed;
 }
 
 
@@ -56,7 +56,7 @@ img{
 
 .search-container
 {
-	width:25%;
+	width:28%;
 	display:inline-block;
 	height:100%;
 	padding:30px 20px;
@@ -64,7 +64,7 @@ img{
 
 .exam-container
 {
-	width:74%;
+	width:70%;
 	display:inline-block;
 	height:100%;
 	padding:30px 20px;
@@ -76,7 +76,7 @@ img{
 {
 	width:100%;
 	height:35px;
-	background-color:#34ab83;
+	background-color:#1bc0c9;
 	display:table;
 }
 
@@ -106,13 +106,16 @@ img{
 {
 	margin-top:30px;
 	padding:0px 5px;
+	text-align: left;
 }
 
 .letter-bar > *
 {
 	display:inline-block;
 	padding:10px 5px;
-	min-width:25px;
+	min-width:28px;
+	width: 28px;
+	max-width: 28px;
 	font-family:HelveticaLTStd;
 	cursor:pointer;
 }
@@ -133,17 +136,17 @@ img{
 
 .border-top-container div:nth-child(1)
 {
-	background-color:#006850;
+	background-color:#1bc0bf;
 }
 
 .border-top-container div:nth-child(2)
 {
-	background-color:#008674;
+	background-color:#61d5ce;
 }
 
 .border-top-container div:nth-child(3)
 {
-	background-color:#34ab83;
+	background-color:#a6e4e5;
 }
 
 
@@ -163,17 +166,17 @@ img{
 
 .border-bottom-container div:nth-child(1)
 {
-	background-color:#34ab83;
+	background-color:#a6e4e5;
 }
 
 .border-bottom-container div:nth-child(2)
 {
-	background-color:#008674;
+	background-color:#61d5ce;
 }
 
 .border-bottom-container div:nth-child(3)
 {
-	background-color:#006850;
+	background-color:#1bc0bf;
 }
 
 .footer
@@ -233,12 +236,13 @@ img{
 .icon-calc
 {
 	display:inline-block;	
-	background-image:url(../img/calc-icon.png);
+	background-color: #fff;
+	background-image:url(../img/budget.png);
 	background-size:contain;
 	width:40px;
 	height:40px;
 	cursor:pointer;
-	position:fixed;
+	position:absolute;
 	right:20px;
 	margin-top:15px;
 }
@@ -288,7 +292,7 @@ img{
 .item-list
 {
 	font-size:13px;
-	color:#445e42;
+	color:#333333;
 	padding:6px 0px 4px 0px;
 	border-bottom:1px solid #a6a5ab;
 	display:inline-block;
@@ -353,7 +357,7 @@ input[type=checkbox] {
 
 .menu-content
 {
-	padding:10px;
+	padding:10px 15px;
 }
 
 
@@ -367,6 +371,7 @@ input[type=checkbox] {
 	vertical-align:top;
 	padding-top:5px;
 	text-transform:uppercase;
+	text-align: left;
 }
 
 
@@ -556,14 +561,14 @@ input[type=checkbox] {
 		background-position: left;
 		margin-right:40px;
 	}
-	
+	/*
 	.icon-calc
 	{
 		right:0px;
 		width:35px;
 		height:35px;
 		z-index:100;
-	}
+	}*/
 	
 	.search-input
 	{
@@ -624,7 +629,8 @@ input[type=checkbox] {
 .c-menu
 {
 	z-index:1000;
-	background-color:#34ab83;
+	background-color:#1bc0c9;
+	padding-top: 50px;
 	transition:transform .3s
 }
 
@@ -763,7 +769,7 @@ input[type=checkbox] {
 
 .c-menu__close{
 	color:#fff;
-	background-color:#34ab83;
+	background-color:#1bc0c9;
 	border:none;
 	cursor:pointer
 }
