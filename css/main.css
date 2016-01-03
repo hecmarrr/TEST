@@ -922,14 +922,6 @@ header
 
 	}
 
-
-	section:first-child h1 {
-	    margin: 0px;
-	    height: 80px;
-	    line-height: 80px;
-	    font-size: 20px;
-	}
-
 }
 
 @media (orientation: landscape) and (max-width: 480px) {
@@ -964,7 +956,7 @@ header
 	    background-size: contain;
 	}
 
-	h1 {
+	section:first-child h1 {
 	    margin: 0px;
 	    height: 80px;
 	    line-height: 80px;

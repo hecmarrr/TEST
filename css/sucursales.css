@@ -168,6 +168,43 @@ ul ul {
     padding: 0px 15px 15px 15px;
 }
 
+
+
+.search-input-suc
+{
+	/*background-color:#02adc6;*/
+	border: 1px solid #eee;
+    color: inherit;
+    font-size: 15px;
+    margin-right: 2%;
+    width: 85%;
+    outline-style: none;
+    box-shadow: none;
+    float: left;
+    padding: 3px;
+}
+
+
+.search-icon-black
+{
+	background-image:url(../img/search-icon-black.png);
+	background-size:contain;
+	width:22px;
+	height:22px;
+	cursor:pointer;
+	float:right;
+	margin-right:5px;
+}
+
+
+.search-box
+{
+	height: 40px;
+	padding-top: 5px;
+}
+
+
+
 @media (max-width: 1024px){
 	.mini-gallery div
 	{

@@ -2,6 +2,20 @@
 var section;
 $(".menu_main_icon").hide();
 
+
+    $("#search-input-suc").focus(function() {
+        $("#search-input-suc").val("");
+    });
+    
+    $("#search-input-suc").focusout(function() {
+        var val = $("#search-input-suc").val();
+        if (val == "")
+        {
+        $("#search-input-suc").val("Buscar...");
+        }
+    });
+
+
 var latitude = -2.173278;
 var longitude = -79.898786;
 var zoom = 16;
