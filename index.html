@@ -121,16 +121,18 @@
 
 						<main class="o-content">
 						    <div class="o-container">
+						    	<span class="total-tip">Ver Total</span>
 						    	 <div class="icon-calc" id="c-button--slide-right"></div>
 						    	<div class="search-container">
 						        	<div id="search-bar" class="search-bar">
 						            	<div>
-						                	<input type="text" value="Buscar..." class="search-input" name="search-input" id="search-input">
+						                	<input type="text" value="Búsqueda por nombre." class="search-input" name="search-input" id="search-input">
 						                    <div id="search-btn" class="search-icon"></div>
 						                </div>
 						            </div>
-						            
+						           <div><b> Lista de exámenes por orden alfabético</b></div>
 						            <div class="letter-bar">
+
 						            	<span class="alfabet" id="a">A</span>
 						                <span class="alfabet" id="b">B</span>
 						                <span class="alfabet" id="c">C</span>
@@ -214,20 +216,110 @@
 
 						<nav id="c-menu--slide-right" class="c-menu c-menu--slide-right">
 						  <div class="c-menu__close"><button class="c-menu__close c-menu-title">CALCULADORA </button> <div class="icon-calc-white"></div></div>
+						  
 						  <div class="menu-content">
 						  	
 						  </div>
 						  <br><br><br>
+						  
 						  <div class="menu-total">
 						      <div>TOTAL: </div>
 						      <div class="menu-result">$ <span id="precio-result">00.00</span></div>
+						      <img src="img/mail2.png" id="btn_email">
+						  		
 						  </div>
+
+						  <div class="menu-pay-btn">
+						      <div>PAGO EN LINEA </div>
+						      <img src="img/pay.png" id="btn_pay">
+						  		
+						  </div>
+
 						  
 						</nav><!-- /c-menu slide-right -->
 
 
 						<div id="c-mask" class="c-mask"></div><!-- /c-mask -->
 
+						
+
+						<div style="position: absolute; left: 50%;" id="pop_up">
+					        <div style="position: relative; left: -50%;">
+					            <img src="img/delete.png" class="close-icon-popup">
+					            <div class="title-popup">Completa los campos y envía una cotización a tu correo electrónico</div>
+					            <br><br>
+					            <div class="form-cotizacion">
+
+						            <div><span>Nombres completos:* </span><br><input type="text" id="nombres"> </div>
+						            <div><span>Correo electrónico:* </span><br><input type="text" id="correo"></div>
+						            <div><span>Nombre del Doctor: </span><br><input type="text" id="doctor"></div>
+						            <div><span>Teléfono: </span><br><input type="text" id="telefono"></div>
+						            <center><div class="btn-popup">ENVIAR</div></center><br>
+						            <div id="error">Por favor completa los campos requeridos para continuar.</div>
+					        	</div>
+				        	</div>
+				        </div>
+
+
+				        <div style="position: absolute; left: 20%;" id="pop_up_pay">
+					        <div style="position: relative;">
+					            <img src="img/delete.png" class="close-icon-popup-pay">
+					            <div class="title-popup">Completa la información de pago</div>
+					            <br>
+					            <div class="form-pay">
+						            <div>Valor Estimado a pagar: $<span id="total_pagar"></span></div><br>
+						            <div>Cupón de descuento: <input type="text" id="cupon">
+						            	<input type="submit" value="Ingresar" id="add_cupon">
+						            	<span id="descuento"></span>
+						            </div><br>
+						            <div>TOTAL A PAGAR: <span id="precio_final"></span></div><br><br>
+						            <div><b>Tarjeta de Crédito </b></div><br>
+						            <div><span>Nombres:</span><br><input type="text" id="nombre_pago"> </div>
+						            <div><span>Apellido:</span><br><input type="text" id="apellido_pago"></div>
+						            <div><span>Nro. de Tarjeta: </span><br><input type="text" id="n_tarjeta" ></div>
+						            <div><span>Fecha de Vencimiento: </span><br>
+						            <select>
+						            	<option>ENERO (01) </option>
+						            	<option>FEBRERO (02) </option>
+						            	<option>MARZO (03) </option>
+						            	<option>ABRIL (04) </option>
+						            	<option>MAYO (05) </option>
+						            	<option>JUNIO (06) </option>
+						            	<option>JULIO (07) </option>
+						            	<option>AGOSTO (08) </option>
+						            	<option>SEPTIEMBRE (09) </option>
+						            	<option>OCTUBRE (10) </option>
+						            	<option>NOVIEMBRE (11) </option>
+						            	<option>DICIEMBRE (12) </option>
+						            </select>
+						            <select>
+						            	<option>2016</option>
+						            	<option>2017</option>
+						            	<option>2018</option>
+						            	<option>2019</option>
+						            	<option>2020</option>
+						            	<option>2021</option>
+						            	<option>2022</option>
+						            	<option>2023</option>
+						            	<option>2024</option>
+						            	<option>2025</option>
+						            	<option>2026</option>
+						            	<option>2027</option>
+						            	<option>2028</option>
+						            	<option>2029</option>
+						            	<option>2030</option>
+						            	
+						            </select>
+						            </div>
+						            <div><span>Código de Seguridad: </span><br><input class="min-btn" type="text" id="cod_seguridad" maxlength="4"><img src="img/conversation6.png">
+						            </div><br>
+
+						            
+						            <center><div id="btn_pay_popup" class="btn-popup-pay">CONTINUAR</div></center><br>
+						            
+					        	</div>
+				        	</div>
+				        </div>
 
 	            </section>
 	        </section>
@@ -240,6 +332,7 @@
 <script type="text/javascript" src="js/call_php.js"></script>
 <script src="js/content.js"></script>
 <script src="js/dist/menu.js"></script>
+<script src="js/validation.js"></script>
 <script src="js/calculadora.js"></script>
 <script type="text/javascript" src="lib/bx_slider/jquery.bxslider.js"></script>
 <script type="text/javascript" src="lib/acordeon/acordeon.js"></script>

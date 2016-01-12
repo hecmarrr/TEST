@@ -40,6 +40,9 @@
   <feature name="Geolocation">
     <param name="ios-package" value="CDVLocation" />
 </feature>
+<feature name="Notification">
+    <param name="ios-package" value="CDVNotification" />
+</feature>
   <icon src="icon.png"/>
   <icon src="www/res/icon/android/icon-36-ldpi.png" gap:platform="android" gap:qualifier="ldpi"/>
   <icon src="www/res/icon/android/icon-48-mdpi.png" gap:platform="android" gap:qualifier="mdpi"/>

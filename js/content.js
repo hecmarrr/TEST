@@ -1,4 +1,10 @@
-﻿// MENUU//
+﻿$(function(){
+  document.addEventListener("deviceready", onDeviceReady, false);
+})
+
+
+
+
 var section;
 $(".menu_main_icon").hide();
 
@@ -19,6 +25,8 @@ $(".menu_main_icon").hide();
 var latitude = -2.173278;
 var longitude = -79.898786;
 var zoom = 16;
+var local_name;
+
 
 $("#btn_suc").click(function(e) {
     show_suc();
@@ -100,7 +108,7 @@ map.panTo(new google.maps.LatLng(latitude, longitude));
 $(".option_menu").click(function(e) {
 	$(".option_menu").removeClass("bold");
 	$(this).addClass("bold");
-	var local_name = $(this).attr('name');
+	local_name = $(this).attr('name');
 	$(".locales_block_pos").hide();
 	$("#" + local_name).show();
 	latitude = $("#" + local_name).find('.locales_latitude').text();
@@ -134,6 +142,19 @@ function load_map(la, lo, zo)
 	});
 			
 	marker.setMap(map);
+    if (local_name === undefined )
+    {
+        var direccion_principal = $("#suc1_dir_principal").text();
+    }
+    else
+    {
+        var direccion_principal = $("#" + local_name + "_dir_principal").text();
+    }
+    var infowindow = new google.maps.InfoWindow({
+      content:direccion_principal
+    });
+
+    infowindow.open(map,marker);
 }
 
 
@@ -150,10 +171,14 @@ function load_map(la, lo, zo)
     function localizame() {
         
         if (navigator.geolocation) {
-            navigator.geolocation.getCurrentPosition(coordenadas, errores);
+           onDeviceReady();
         } else {
             alert('Oops! Tu navegador no soporta geolocalización. Bájate Chrome, que es gratis!');
         }
+    }
+
+    function onDeviceReady() {
+        navigator.geolocation.getCurrentPosition(coordenadas, errores);     
     }
 
     function coordenadas(position) {

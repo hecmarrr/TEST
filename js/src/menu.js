@@ -51,7 +51,7 @@
     this.wrapper = document.querySelector(this.options.wrapper);
     this.mask = document.querySelector(this.options.maskId);
     this.menu = document.querySelector('#c-menu--' + this.options.type);
-    this.closeBtn = this.menu.querySelector('.c-menu__close');
+ 
     this.menuOpeners = document.querySelectorAll(this.options.menuOpenerClass);
     this._initEvents();
   };
@@ -65,6 +65,9 @@
       e.preventDefault();
       this.close();
     }.bind(this));
+
+
+
 
     // Event for clicks on the mask.
     this.mask.addEventListener('click', function(e) {
