@@ -92,14 +92,14 @@ $body = '<html>
 					<table>
 						<tr>
 							<td>
-							Estimado, '. $nombre . ', muchas gracias por usar nuestra aplicación!
+							Estimado '. $nombre . ', muchas gracias por usar nuestra aplicacion!
 
 							</td>
 						</tr>
 						<tr>
 							<td>
 							<a href="http://integradora.edusite.me/php/fpdf/'. $cotizacion_sec .'">
-							<b>Pulse aquí para descargar la cotizacion</b>
+							<b>Pulse aqui para descargar la cotizacion</b>
 							</a>
 							</td>
 							

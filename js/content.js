@@ -121,6 +121,8 @@ $(".option_menu").click(function(e) {
 
 function load_map(la, lo, zo)
 {
+    var outputDiv = document.getElementById('output');
+    outputDiv.innerHTML = '';
 	latitude = la;
 	longitude = lo;
 	zoom = Number(zo);
@@ -241,4 +243,50 @@ function load_map(la, lo, zo)
                 directionsDisplay.setDirections(response);
             }
         });
+
+        /****************************************************************************************/
+        
+        var geocoder = new google.maps.Geocoder;
+
+        var service = new google.maps.DistanceMatrixService;
+        service.getDistanceMatrix({
+            origins: [inicio, 'Origen'],
+            destinations: [destino, 'Destino'],
+            travelMode: google.maps.TravelMode.DRIVING,
+            unitSystem: google.maps.UnitSystem.METRIC,
+            avoidHighways: false,
+            avoidTolls: false
+        }, function(response, status) {
+            if (status !== google.maps.DistanceMatrixStatus.OK) {
+                alert('Error was: ' + status);
+            } else {
+                var originList = response.originAddresses;
+                var destinationList = response.destinationAddresses;
+                var outputDiv = document.getElementById('output');
+                outputDiv.innerHTML = '';
+
+                var showGeocodedAddressOnMap = function(asDestination) {
+                    return function(results, status) {
+                    };
+                };
+
+                for (var i = 0; i < originList.length; i++) {
+                    var results = response.rows[i].elements;
+                    geocoder.geocode({'address': originList[i]},
+                        showGeocodedAddressOnMap(false));
+                    for (var j = 0; j < results.length; j++) {
+                        geocoder.geocode({'address': destinationList[j]},
+                            showGeocodedAddressOnMap(true));
+                        /*$("#output").html(originList[i] + ' to ' + destinationList[j] +
+                            ': ' + String(results[j].distance.text) + ' in ' +
+                            String(results[j].duration.text) + '<br>');*/
+                        outputDiv.innerHTML = originList[i] + ' hacia ' + destinationList[j] +
+                            ': ' + String(results[j].distance.text) + ' en ' +
+                            String(results[j].duration.text) + '<br>';
+                    }
+                }
+            }
+        });
+        /*********************************************************************************************************************************************/
+        
  }

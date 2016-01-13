@@ -158,7 +158,19 @@
                         precio = precio - precio_sel;
                         var total = precio;
                         precio_final = precio;
-                        
+                        htmlString = $( "#exam_" + exam_id ).html();
+                         nombre_examen = htmlString;
+                         nombre_examen = nombre_examen.replace('<span class="price">','');
+                         nombre_examen = nombre_examen.replace('</span>','');
+                        var i;
+                        $.each(datos, function(index, value){
+                            
+                           if(value ==  nombre_examen ){
+                              
+                            datos.splice(index, 1);
+                              return false; // retrun false to stop the loops
+                           }
+                        });
                         $("#precio-result").html(total.toFixed(2));
                         $("#total-result").html(total.toFixed(2));
                         $( "#examen_fila_" + exam_id  ).remove();
@@ -231,7 +243,7 @@ $("#btn_email").click(function(e) {
 });
 
 $(".close-icon-popup").click(function(e) {
-   $("#pop_up").hide();
+    $("#pop_up").hide();
     $("#c-mask").removeClass("is-active");    
 });
 

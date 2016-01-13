@@ -83,9 +83,25 @@
                     url: "http://integradora.edusite.me/php/fpdf/send_email.php",
                     data: {data : datos},
                     success: function(a) {
-                          swal("Listo!", "Cotización enviada correctamente", "success")
-                          datos = [];
-                          datos.length = 0;
+                          	swal("Listo!", "Cotización enviada correctamente", "success")
+                          	datos = [];
+                          	datos.length = 0;
+                          	$("#pop_up").hide();
+    						$("#c-mask").removeClass("is-active");  
+    						$("#nombres").val("");
+							$("#correo").val("");
+							$("#telefono").val("");
+							$("#doctor").val("");
+							$('.check-item').prop('checked', false);  
+							$('.check-item_exm').prop('checked', false);  
+							precio = 0;
+                        	precio_final = precio;
+                        	var total = precio;
+                        	$("#precio-result").html(total);
+                        	
+                        	$(".item-list-menu").remove();
+                        	$(".check-item_exm").remove();
+                        	
                             }
                     
                     }); 

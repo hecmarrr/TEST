@@ -241,3 +241,19 @@ ul ul {
 	}
 }
 
+div#output {
+    padding: 15px 30px;
+}
+
+#gallery-img
+{
+	width: 100%;
+	padding: 10px 0px;
+}
+
+#gallery-img img
+{
+	display: inline-block;
+	max-width: 22%;
+	height: auto;
+}
