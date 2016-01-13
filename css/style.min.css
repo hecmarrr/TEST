@@ -1013,3 +1013,15 @@ input[type=checkbox] {
 	color: #1bc0c9;
 	padding: 2px 5px;
 }
+
+.confirm_popup {
+  width: 70%;
+  background-color: #e5e5e5;
+  display: none;
+}
+
+.confirm_popup_centered {
+  width: 150px;
+  background-color: #ccc;
+  margin: 0 auto;
+}

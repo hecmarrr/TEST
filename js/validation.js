@@ -65,6 +65,7 @@
 		correo = $("#correo").val();
 		telefono = $("#telefono").val();
 		doctor = $("#doctor").val();
+		datos.unshift("DETALLE DE EXAMENES");
 		datos.unshift(telefono);
 		datos.unshift(doctor);
 		datos.unshift(correo);
@@ -82,7 +83,9 @@
                     url: "http://integradora.edusite.me/php/fpdf/send_email.php",
                     data: {data : datos},
                     success: function(a) {
-                          alert("ok");
+                          swal("Listo!", "Cotización enviada correctamente", "success")
+                          datos = [];
+                          datos.length = 0;
                             }
                     
                     }); 
@@ -90,9 +93,8 @@
 
 	
 	
-	function onConfirm(buttonIndex) {
-        alert('You selected button ' + buttonIndex);
-    }
+
+    
     
 	$("#btn_pay_popup").click(function(){	
 		//Validate required fields
@@ -113,12 +115,25 @@
 			return false;
 		} else {
 			errornotice.hide();
-			 navigator.notification.confirm(
-            'You are the winner!', // message
-             onConfirm,            // callback to invoke with index of button pressed
-            'Game Over',           // title
-            ['Restart','Exit']         // buttonLabels
-        );
+			swal({   
+				title: "¿Desea confirmar su pago?",   
+				text: "Se realizará el pago por $" + precio_final,   
+				type: "warning",   
+				showCancelButton: true,   
+				confirmButtonColor: "#1bc0c9",   
+				confirmButtonText: "Si, desea realizar el pago",   
+				cancelButtonText: "No, cancelar transacción",   
+				closeOnConfirm: false,   
+				closeOnCancel: false }, 
+
+				function(isConfirm){   
+					if (isConfirm) {     
+						swal("Pago Realizado", "Se realizó el pago correctamente", "success");   
+					} else 
+					{     
+						swal("Cancelado", "No se procedió con el pago", "error");   
+					} 
+				});
 			return true;
 		}
 	});

@@ -7,6 +7,7 @@
     var lon;
     var flag = 0;
     var datos = [];
+    var precio_final;
 
     $("#search-input").focus(function() {
         $("#search-input").val("");
@@ -136,7 +137,7 @@
                         precio = precio + precio_sel;
                         /*var total = precio.toFixed(2);*/
                         var total = precio;
-                        
+                        precio_final = precio;
                     
                         //alert(precio);
                          htmlString = $( "#exam_" + exam_id ).html();
@@ -156,6 +157,7 @@
                     {
                         precio = precio - precio_sel;
                         var total = precio;
+                        precio_final = precio;
                         
                         $("#precio-result").html(total.toFixed(2));
                         $("#total-result").html(total.toFixed(2));
@@ -181,6 +183,7 @@
                         $('#' + id_exam_ck).removeProp('checked');
                         var precio_ck = $('#' + id_exam_ck).val();
                         precio = precio - precio_ck;
+                        precio_final = precio;
                         var total = precio;
                         $("#precio-result").html(total.toFixed(2));
                         $("#total-result").html(total.toFixed(2));
@@ -205,6 +208,7 @@
                         var id_exam_ck = res[3];
                         var precio_ck = $('#' + id_exam_ck).val();
                         precio = precio - precio_ck;
+                        precio_final = precio;
                         var total = precio;
                     
                         $('#' + id_exam_ck).removeProp('checked');
@@ -281,5 +285,6 @@ function calcular_descuento()
     else
     {
         $("#descuento").html("Cupon Invalido");
+        precio_final = precio;
     }
 }
