@@ -168,7 +168,7 @@
                            if(value ==  nombre_examen ){
                               
                             datos.splice(index, 1);
-                              return false; // retrun false to stop the loops
+                             // return false; // retrun false to stop the loops
                            }
                         });
                         $("#precio-result").html(total.toFixed(2));
@@ -197,21 +197,25 @@
                         precio = precio - precio_ck;
                         precio_final = precio;
                         var total = precio;
+                        htmlString = $( "#examen_fila_" + id_exam_ck + " .item-list-menu").html();
                         $("#precio-result").html(total.toFixed(2));
                         $("#total-result").html(total.toFixed(2));
                         $( "#examen_fila_" + id_exam_ck  ).remove();
                         $( "#examen_fila_mini_" + id_exam_ck  ).remove();
-                        htmlString = $( "#exam_" + exam_id ).html();
+                        
                         nombre_examen = htmlString;
+                        
                         nombre_examen = nombre_examen.replace('<span class="price">','');
                         nombre_examen = nombre_examen.replace('</span>','');
-                        var i;
+                        
+
                         $.each(datos, function(index, value){
                             
-                           if(value ==  nombre_examen ){
+                               
+                           if(value.trim() ==  nombre_examen.trim() ){
                               
-                            datos.splice(index, 1);
-                              return false; // retrun false to stop the loops
+                                datos.splice(index, 1);
+                              //return false; // retrun false to stop the loops
                            }
                         });
                         
