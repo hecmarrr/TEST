@@ -159,9 +159,9 @@
                         var total = precio;
                         precio_final = precio;
                         htmlString = $( "#exam_" + exam_id ).html();
-                         nombre_examen = htmlString;
-                         nombre_examen = nombre_examen.replace('<span class="price">','');
-                         nombre_examen = nombre_examen.replace('</span>','');
+                        nombre_examen = htmlString;
+                        nombre_examen = nombre_examen.replace('<span class="price">','');
+                        nombre_examen = nombre_examen.replace('</span>','');
                         var i;
                         $.each(datos, function(index, value){
                             
@@ -201,7 +201,19 @@
                         $("#total-result").html(total.toFixed(2));
                         $( "#examen_fila_" + id_exam_ck  ).remove();
                         $( "#examen_fila_mini_" + id_exam_ck  ).remove();
-                        
+                        htmlString = $( "#exam_" + exam_id ).html();
+                        nombre_examen = htmlString;
+                        nombre_examen = nombre_examen.replace('<span class="price">','');
+                        nombre_examen = nombre_examen.replace('</span>','');
+                        var i;
+                        $.each(datos, function(index, value){
+                            
+                           if(value ==  nombre_examen ){
+                              
+                            datos.splice(index, 1);
+                              return false; // retrun false to stop the loops
+                           }
+                        });
                         
                     }
                     
