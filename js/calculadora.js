@@ -316,3 +316,14 @@ function calcular_descuento()
         precio_final = precio;
     }
 }
+
+
+$('select').on('change', function() {
+
+        precio_final = precio;
+        descuento_tarjeta = $(this).val();
+        $("#descuento_tarj").html(" -" + descuento_tarjeta + "%");
+        precio_final = precio - ((precio * descuento_tarjeta) / 100);
+        $("#precio_final").html("$" + precio_final);
+  
+});
